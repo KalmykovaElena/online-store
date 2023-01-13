@@ -33,7 +33,7 @@ export function renderGoodCard(id: string) {
 
     if(cartState.some((item: Item) => item.id == id)) {
       cardBtnAdd.classList.add('added-item');
-      cardBtnAdd.textContent = 'Remove';
+      cardBtnAdd.textContent = 'Added to cart';
       card.classList.add('added-item');
     }
 
@@ -58,7 +58,7 @@ export function renderGoodCard(id: string) {
 
       if (cardBtnAdd.classList.contains('added-item')){
         updateProductList(id, 1);
-        cardBtnAdd.textContent = 'Remove';
+        cardBtnAdd.textContent = 'Added to cart';
         card.classList.add('added-item');
       } else {
         updateProductList(id, 0);

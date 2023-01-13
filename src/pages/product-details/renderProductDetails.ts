@@ -63,7 +63,7 @@ export const renderProductDetails = <T extends string | undefined>(id: T) => {
 
     if (cartState.some((item: Item) => item.id == id)) {
       btnAdd.classList.add('added-item')
-      btnAdd.textContent = 'Remove'
+      btnAdd.textContent = 'Added to cart'
     }
 
     btnBuy.setAttribute('data-href','cart');
@@ -94,7 +94,7 @@ export const renderProductDetails = <T extends string | undefined>(id: T) => {
         if (typeof id == 'string') {
           if (btnAdd.classList.contains('added-item')) {
             updateProductList(id, 1);
-            btnAdd.textContent = 'Remove';
+            btnAdd.textContent = 'Added to cart';
           } else {
             updateProductList(id, 0);
             btnAdd.textContent = 'Add to cart';

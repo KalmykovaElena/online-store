@@ -3,7 +3,6 @@ import {CartServices} from "./cartServices";
 export const updateCartTotal = () => {
   const cartState = CartServices.getState();
   const cartTotalCount =document.querySelector('.header__cart-total-count');
-  const cartItemsCount =document.querySelector('.header__cart-count');
   const cartTotal =document.querySelector('.cart__summary-total')as HTMLElement;
   const cartSummaryCount=  document.querySelector('.cart__summary-count');
   const total = cartState.reduce((acc, el) => {
@@ -30,7 +29,5 @@ export const updateCartTotal = () => {
   if(cartSummaryCount!==null){
     cartSummaryCount.textContent = `Products: ${totalCount}`;
   }
-  if(cartItemsCount!==null){
-    cartItemsCount.textContent = `${totalCount}`;
-  }
+
 }
