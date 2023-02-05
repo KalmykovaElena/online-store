@@ -4,21 +4,21 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "build": "webpack --mode production",
-    "dev": "webpack --mode development",
-    "start": "webpack-dev-server --mode development --open"
+    "build": "webpack",
+    "build:prod": "webpack --config webpack.config.prod.js",
+    "start": "webpack serve --mode=development --progress"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/oxxol/online-store.git"
+    "url": "git+https://github.com/KalmykovaElena/online-store.git"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/oxxol/online-store/issues"
+    "url": "https://kalmykovaelena.github.io/online-store/"
   },
-  "homepage": "https://github.com/oxxol/online-store#readme",
+  "homepage": "https://kalmykovaelena.github.io/online-store",
   "devDependencies": {
     "@types/node": "^18.11.18",
     "@typescript-eslint/eslint-plugin": "^5.46.1",
